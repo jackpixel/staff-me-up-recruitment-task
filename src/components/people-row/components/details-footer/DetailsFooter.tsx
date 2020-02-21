@@ -10,7 +10,7 @@ type DetailsFooterProps = {
 const DetailsFooter: React.FunctionComponent<DetailsFooterProps> = ({
   data
 }) => (
-  <footer>
+  <footer className={styles["footer-details"]}>
     <div className={styles["footer-item"]}>
       <span>mutual connections</span>
       <MutualConnections
