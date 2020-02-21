@@ -1,0 +1,64 @@
+@import "../../../../utils/variables.css";
+
+.button {
+  composes: button-reset from "../../../../utils/variables.css";
+  color: var(--white);
+  background: var(--blue);
+  opacity: 0.4;
+  font: 500 12px/13px 'Roboto';
+  min-width: 120px;
+  height: 36px;
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease-in-out;
+  flex-grow: 1;
+}
+
+.button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.icon-common-contents {
+  flex-grow: 0;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  position: relative;
+  margin-right: 5px;
+}
+
+.icon-common-contents::before,
+.icon-common-contents::after {
+  width: 2px;
+  height: 100%;
+  background: var(--white);
+  position: absolute;
+  left: 50%;
+  top: 0;
+  content: "";
+}
+
+.icon-x-sign,
+.icon-plus-sign {
+  composes: icon-common-contents;
+}
+
+.icon-x-sign::before {
+  transform: rotate(45deg);
+}
+
+.icon-x-sign::after {
+  transform: rotate(-45deg);
+}
+
+.icon-plus-sign::before {
+  transform: none;
+}
+
+.icon-plus-sign::after {
+  transform: rotate(-90deg);
+}

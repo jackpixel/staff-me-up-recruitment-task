@@ -1,0 +1,39 @@
+@import "../../../../utils/variables.css";
+
+.mutual-conntections {
+  margin-left: 4px;
+  display: flex;
+}
+
+@value common-width: 24px;
+@value common-height: common-width;
+
+.item {
+  transition: transform 0.2s ease-in-out;
+  width: common-width;
+  height: common-height;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+}
+
+.item:nth-child(1n + 2) {
+  margin-left: -8px;
+}
+
+.item-last:hover,
+.item:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.item-last {
+  margin-left: -8px;
+  transition: transform 0.2s ease-in-out;
+  width: common-width;
+  height: common-height;
+  border-radius: 50%;
+  background: var(--blue);
+  color: var(--white);
+  flex-shrink: 0;
+  composes: flex-center from "../../../../utils/variables.css";
+}
