@@ -1,0 +1,43 @@
+@import "../../../../utils/variables.css";
+
+.experience {
+  margin-bottom: 18px;
+}
+
+.experience-item {
+  border-bottom: 1px solid var(--grey);
+  padding: 5px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (max-width: 320px) {
+  .experience-item {
+    flex-direction: column;
+  }
+}
+
+.title {
+  color: var(--blue);
+  font: 500 14px/20px "Roboto";
+}
+
+@media (min-width: 321px) {
+  .title {
+    width: 80%;
+  }
+}
+
+.production {
+  color: var(--black);
+}
+
+.year {
+  font: 500 12px/20px "Roboto";
+}
+
+.genre {
+  font: 400 12px/20px "Roboto";
+  color: var(--dark-grey);
+}

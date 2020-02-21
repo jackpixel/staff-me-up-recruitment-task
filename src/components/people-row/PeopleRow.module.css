@@ -1,0 +1,129 @@
+@import "../../utils/variables.css";
+
+.people-row {
+  display: flex;
+  border: 1px solid var(--grey);
+  width: var(--people-row-width);
+  min-height: var(--people-row-min-height);
+}
+
+@media (max-width: 320px) {
+  .people-row {
+    flex-direction: column;
+    width: 320px;
+    border: 0;
+  }
+}
+
+.general-common-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.general {
+  position: relative;
+  background: var(--ivory);
+  flex-shrink: 0;
+  composes: general-common-contents;
+}
+
+@media (min-width: 321px) {
+  .general {
+    width: var(--general-panel-width);
+  }
+}
+
+.general > footer {
+  width: 100%;
+}
+
+.general-inner {
+  padding: var(--general-panel-padding-top)
+    var(--general-panel-padding-horizontal) var(--general-panel-padding-bottom);
+  composes: general-common-contents;
+}
+
+.close {
+  flex-grow: 0;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 0.5;
+  composes: button-reset from "../../utils/variables.css";
+  transition: opacity 0.2s ease-in-out;
+}
+
+.close:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.close::before,
+.close::after {
+  width: 1px;
+  height: 100%;
+  background: var(--black);
+  position: absolute;
+  left: 50%;
+  top: 0;
+  content: "";
+}
+
+.close::before {
+  transform: rotate(45deg);
+}
+
+.close::after {
+  transform: rotate(-45deg);
+}
+
+.name {
+  font: 500 18px/20px "Roboto";
+  color: var(--blue);
+  margin: 5px 0 0;
+}
+
+.location {
+  font: 500 12px/16px "Roboto";
+  margin-bottom: 7px;
+}
+
+.about {
+  font: Italic 12px/16px "Roboto";
+  max-width: 200px;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  margin-top: auto;
+  justify-content: space-between;
+}
+
+footer > button:first-child {
+  border-top: 1px solid var(--grey);
+  border-right: 1px solid var(--grey);
+}
+
+footer > button:last-child {
+  border-top: 1px solid var(--grey);
+}
+
+.details {
+  padding: var(--details-panel-padding-vertical);
+}
+
+@media (max-width: 320px) {
+  .details {
+    padding: calc(var(--details-panel-padding-vertical) - 5px);
+  }
+}
+
+@media (min-width: 321px) {
+  .details {
+    border-left: 1px solid var(--grey);
+  }
+}

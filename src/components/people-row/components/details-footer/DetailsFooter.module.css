@@ -1,0 +1,33 @@
+@import "../../../../utils/variables.css";
+
+@media (max-width: 320px) {
+  .details > footer {
+    flex-direction: column;
+  }
+}
+
+.footer-item {
+  font: 500 12px/20px "Roboto";
+  text-transform: uppercase;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  height: 25px;
+}
+
+.counter {
+  transition: opacity 0.2s ease-in-out;
+  background: var(--blue);
+  font: 400 10px/16px "Roboto";
+  color: var(--white);
+  width: 20px;
+  height: 15px;
+  border-radius: 12px;
+  text-align: center;
+  margin-left: 4px;
+}
+
+.counter:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
