@@ -21,7 +21,10 @@ const PeopleRow: React.FunctionComponent<PeopleRowProps> = ({
       <button onClick={onClose} className={styles.close} />
       <div className={styles["general-inner"]}>
         <Avatar url={userAvatar} progress={data.matchPercentage} />
-        <h3 className={styles.name}>{data.name}</h3>
+        <div className={styles['name-container']}>
+          <h3 className={styles.name}>{data.name}</h3>
+          <span className={styles.icon} />
+        </div>
         <h4 className={styles.location}>{data.location}</h4>
         <p className={styles.about}>{data.about}</p>
       </div>
