@@ -1,0 +1,35 @@
+:root {
+  --white: #FFFFFF;
+  --black: rgba(0, 0, 0, 0.87);
+  --ivory: #FBFBFD;
+  --pink: pink;
+  --blue: #006FBF;
+  --sky-blue: #92C0E8;
+  --grey: #E1E3EA;
+  --dark-grey: #757575;
+  --yellow: #FCB800;
+
+  --people-row-width: 750px;
+  --people-row-min-height: 250px;
+
+  --general-panel-width: 240px;
+  --general-panel-padding-top: 15px;
+  --general-panel-padding-bottom: 15px;
+  --general-panel-padding-horizontal: 23px;
+
+  --details-panel-padding-vertical: 25px;
+  --details-panel-padding-horizontal: 25px;
+}
+
+.button-reset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
